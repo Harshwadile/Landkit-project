@@ -66,6 +66,10 @@ body{
     color: #335eea !important;
   }
   
+  .dropdown-item:hover {
+
+    color: #335eea !important;
+  }
 
   
   .nav-link {
@@ -155,13 +159,8 @@ body{
     display: flex;
     flex-wrap :nowrap !important;
     padding-right: calc(var(--bs-gutter-x) * 1.5)
-    /* margin-top: calc(var(--bs-gutter-y) * -1); */
-    /* margin-right: calc(var(--bs-gutter-x) * -.5); */
-    /* margin-left: calc(var(--bs-gutter-x) * -.5); */
+   
   }
-
-
-  
   .dropdown-img-start{
   
     background-image: url(photo-3.jpg) !important;
@@ -373,8 +372,8 @@ body{
 
 .dropdown-item {
   background-color: transparent;
-  border: 0;
-  clear: both;
+  border: none !important;
+  clear: none !important;
   color: var(--bs-dropdown-link-color);
   display: block;
   font-weight: 400;
@@ -382,6 +381,16 @@ body{
   text-align: inherit;
   white-space: nowrap;
   width: 100%;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: transparent !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: transparent !important;
 }
 
   @media screen and (min-width: 769px) {
@@ -956,7 +965,7 @@ Brands
 
 .blockquote-footer {
   margin-top: -3rem !important;
-  padding-top: 0px !important;
+ 
  
 }
 }
@@ -1045,7 +1054,12 @@ Brands
 
 .col-md-7 {
   flex: 0 0 auto ;
-  width: 58.33333333%;
+  width: 54.33333333% !important;
+}
+
+.col-md-5 {
+  flex: 0 0 auto !important;
+  width: 38.666667% !important;
 }
 
 /* .card-row .card-body {
@@ -1065,7 +1079,8 @@ Brands
 
   .blockquote-footer{
 
-    padding-left: 0px !important;
+    padding-left: 0px !;
+
     padding-top: 40px !important;
   }
 }
@@ -1143,6 +1158,12 @@ Brands
   padding-top: 4rem !important;
 }
 
+.card {
+  
+  border: 0px solid rgba(0,0,0,.125) !important;
+ 
+}
+
 @media (min-width: 768px){
 
   .py-md-8 {
@@ -1170,6 +1191,16 @@ Brands
     font-size: 19px;
     font-family: 'Hanken Grotesk', sans-serif;
     margin: 0px 0px 16px;
+}
+
+#pricing .downword{
+
+  padding-bottom: 20px !important;
+}
+
+#pricing .pt-15 .container {
+
+  padding-top: 20px !important;
 }
 
 .pt-9 {
@@ -1265,7 +1296,8 @@ Brands
 
 
 footer{
-  padding-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 /* footer .container{
@@ -1319,6 +1351,14 @@ footer ul li a{
   color: #506690;
 }
 
+/* @media (min-width: 768px){
+
+  .blockquote-footer h6{
+
+    padding-top: 60px !important;
+  }
+} */
+
 
 @media (min-width: 576px){
 
@@ -1331,8 +1371,13 @@ footer ul li a{
     font-size: 17px;
     font-family: 'Hanken Grotesk', sans-serif;
     padding: 0px 0px 0px 12px !important;
-}
 
+  
+    footer .blockquote-footer span h6{
+
+      padding-top: 0px !important;
+    }
+}
 
 }
 
